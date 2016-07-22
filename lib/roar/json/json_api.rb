@@ -44,6 +44,9 @@ module Roar
 
               Fragment::Links.(document, Renderer::Links.new.(hash, {}), options)
               Fragment::Included.(document, included, options)
+
+              document[:meta] = options["meta"] if options["meta"]
+
               document
             end
           end)
